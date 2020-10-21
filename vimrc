@@ -6,7 +6,7 @@
 
 syntax on
 
-set noet ci sts=0 sw=4 ts-4
+set noet ci sts=0 sw=4 ts=4
 
 set noerrorbells
 set noswapfile
