@@ -13,15 +13,11 @@ set noswapfile
 set number
 
 set backspace=2 " make backspace work like most other programs
-
-"this for the plug plugin manager
-call plug#begin("~/.vim/plugged")
-	Plug 'morhetz/gruvbox'
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-call plug#end()
+set showtabline=2
 
 if has('gui_running')
   set guioptions-=T  " no toolbar
+  set guioptions-=e
   colorscheme elflord
   set lines=60 columns=108 linespace=0
   if has('gui_win32')
@@ -30,6 +26,31 @@ if has('gui_running')
     set guifont=DejaVu\ Sans\ Mono\ 10
   endif
 endif
+
+"this for the plug plugin manager
+call plug#begin("~/.vim/plugged")
+	Plug 'morhetz/gruvbox'
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	Plug 'mengelbrecht/lightline-bufferline'
+call plug#end()
+
+"Buffer Bar buffers
+let g:lightline = {
+      \ 'colorscheme': 'one',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'tabline': {
+      \   'left': [ ['buffers'] ],
+      \   'right': [ ['close'] ]
+      \ },
+      \ 'component_expand': {
+      \   'buffers': 'lightline#bufferline#buffers'
+      \ },
+      \ 'component_type': {
+      \   'buffers': 'tabsel'
+      \ }
+      \ }
 
 set bg=dark
 colorscheme gruvbox
