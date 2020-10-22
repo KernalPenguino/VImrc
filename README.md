@@ -5,5 +5,7 @@ systems. hope you use it with vim happy hacking
 
 ## PLugins used
 > vim-plug plugin manager -> https://github.com/junegunn/vim-plug \
-> GruvBox Colorscheme -> https://github.com/morhetz/gruvbox \
-> CoC auto complete -> https://github.com/neoclide/coc.nvim 
+> GruvBox Colorscheme     -> https://github.com/morhetz/gruvbox \
+> CoC auto complete       -> https://github.com/neoclide/coc.nvim \
+> lightline bufferline    -> https://github.com/mengelbrecht/lightline-bufferline \
+> vim-airline statusline  -> https://github.com/vim-airline/vim-airline
