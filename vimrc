@@ -15,6 +15,7 @@ set number
 set backspace=2 " make backspace work like most other programs
 set showtabline=2
 
+"if your in gvim
 if has('gui_running')
   set guioptions-=T  " no toolbar
   set guioptions-=e
@@ -34,23 +35,16 @@ call plug#begin("~/.vim/plugged")
 	Plug 'mengelbrecht/lightline-bufferline'
 call plug#end()
 
-"Buffer Bar buffers
-let g:lightline = {
-      \ 'colorscheme': 'one',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'tabline': {
-      \   'left': [ ['buffers'] ],
-      \   'right': [ ['close'] ]
-      \ },
-      \ 'component_expand': {
-      \   'buffers': 'lightline#bufferline#buffers'
-      \ },
-      \ 'component_type': {
-      \   'buffers': 'tabsel'
-      \ }
-      \ }
+"Buffer Bar config Start
+let g:lightline#bufferline#show_number  = 1
+let g:lightline#bufferline#shorten_path = 0
+let g:lightline#bufferline#unnamed      = '[No Name]'
+
+let g:lightline                  = {}
+let g:lightline.tabline          = {'left': [['buffers']], 'right': [['close']]}
+let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
+let g:lightline.component_type   = {'buffers': 'tabsel'}
+"End config
 
 set bg=dark
 colorscheme gruvbox
