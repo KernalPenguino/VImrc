@@ -11,13 +11,17 @@ set noet ci sts=0 sw=4 ts=4
 set noerrorbells
 set noswapfile
 set number
+set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
+set ruler
 
-set backspace=2 " make backspace work like most other programs
-set showtabline=2
+set laststatus=2
 
-"if your in gvim
+set backspace=2	  "make backspace work like most other programs
+set showtabline=2 "show tabline
+
+
 if has('gui_running')
-  set guioptions-=T  " no toolbar
+  set guioptions-=T
   set guioptions-=e
   colorscheme elflord
   set lines=60 columns=108 linespace=0
@@ -33,17 +37,26 @@ call plug#begin("~/.vim/plugged")
 	Plug 'morhetz/gruvbox'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'mengelbrecht/lightline-bufferline'
+	Plug 'vim-airline/vim-airline'
 call plug#end()
 
 "Buffer Bar config Start
-let g:lightline#bufferline#show_number  = 1
-let g:lightline#bufferline#shorten_path = 0
-let g:lightline#bufferline#unnamed      = '[No Name]'
-
-let g:lightline                  = {}
-let g:lightline.tabline          = {'left': [['buffers']], 'right': [['close']]}
-let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
-let g:lightline.component_type   = {'buffers': 'tabsel'}
+let g:lightline = {
+      \ 'colorscheme': 'one',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'tabline': {
+      \   'left': [ ['buffers'] ],
+      \   'right': [ ['close'] ]
+      \ },
+      \ 'component_expand': {
+      \   'buffers': 'lightline#bufferline#buffers'
+      \ },
+      \ 'component_type': {
+      \   'buffers': 'tabsel'
+      \ }
+      \ }
 "End config
 
 set bg=dark
