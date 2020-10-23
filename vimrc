@@ -6,7 +6,7 @@
 
 syntax on
 
-set noet ci sts=0 sw=4 ts=4 "indenting with tab
+set noet ci sts=0 sw=4 ts=4
 set backspace=2	  "make backspace work like most other programs
 
 set noerrorbells
@@ -17,12 +17,14 @@ set ruler
 
 set laststatus=2
 
+set backspace=2	  "make backspace work like most other programs
 set showtabline=2 "show tabline
-
 
 if has('gui_running')
   set guioptions-=T
   set guioptions-=e
+  set guioptions-=r
+  set guioptions-=L
   colorscheme elflord
   set lines=60 columns=108 linespace=0
   if has('gui_win32')
@@ -38,6 +40,8 @@ call plug#begin("~/.vim/plugged")
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'mengelbrecht/lightline-bufferline'
 	Plug 'vim-airline/vim-airline'
+	Plug 'preservim/nerdtree'
+	Plug 'enomsg/vim-haskellConcealPlus'
 call plug#end()
 
 "Buffer Bar config Start
@@ -58,6 +62,8 @@ let g:lightline = {
       \ }
       \ }
 "End config
+
+autocmd vimenter * NERDTree
 
 set bg=dark
 colorscheme gruvbox
