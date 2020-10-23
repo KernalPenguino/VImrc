@@ -6,7 +6,10 @@
 
 syntax on
 
-set noet ci sts=0 sw=4 ts=4
+set noet ci sts=0 sw=4 ts=4 "indenting with tab
+set backspace=2	  "make backspace work like most other programs
+au VimEnter * !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+au VimLeave * !xmodmap -e 'clear Lock' -e 'keycode 0x42 = Caps_Lock'
 
 set noerrorbells
 set noswapfile
@@ -16,7 +19,6 @@ set ruler
 
 set laststatus=2
 
-set backspace=2	  "make backspace work like most other programs
 set showtabline=2 "show tabline
 
 
