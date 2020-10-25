@@ -8,6 +8,6 @@ systems. hope you use it with vim happy hacking
 * GruvBox Colorscheme     -> https://github.com/morhetz/gruvbox \
 * CoC auto complete       -> https://github.com/neoclide/coc.nvim \
 * lightline bufferline    -> https://github.com/mengelbrecht/lightline-bufferline \
-* vim-airline statusline  -> https://github.com/vim-airline/vim-airline
-* Nerd Tree				  -> https://github.com/preservim/nerdtree
+* vim-airline statusline  -> https://github.com/vim-airline/vim-airline \
+* Nerd Tree				        -> https://github.com/preservim/nerdtree \
 * Haskell Conceal plus    -> https://github.com/enomsg/vim-haskellConcealPlus
