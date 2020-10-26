@@ -40,8 +40,8 @@ call plug#begin("~/.vim/plugged")
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'mengelbrecht/lightline-bufferline'
 	Plug 'vim-airline/vim-airline'
-	Plug 'preservim/nerdtree'
 	Plug 'enomsg/vim-haskellConcealPlus'
+	Plug 'vimwiki/vimwiki'
 call plug#end()
 
 "Buffer Bar config Start
@@ -62,8 +62,6 @@ let g:lightline = {
       \ }
       \ }
 "End config
-
-autocmd vimenter * NERDTree
 
 set bg=dark
 colorscheme gruvbox
