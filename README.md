@@ -1,7 +1,7 @@
 # VImrc!
 this my VImrc dotfile that is constantly is
 being improved. it works with unix based 
-systems. hope you use it with vim happy hacking
+systems and windows. hope you use it with vim happy hacking
 
 ## PLugins used
 * vim-plug plugin manager -> https://github.com/junegunn/vim-plug
