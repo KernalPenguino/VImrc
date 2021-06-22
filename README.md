@@ -1,9 +1,9 @@
 # VImrc!
-this my VImrc dotfile that is constantly is
+this is my VImrc dotfile that is constantly is
 being improved. it works with unix based 
 systems and windows. hope you use it with vim happy hacking
 
-## PLugins used
+## Plugins used
 * vim-plug plugin manager -> https://github.com/junegunn/vim-plug
 * GruvBox Colorscheme     -> https://github.com/morhetz/gruvbox
 * CoC auto complete       -> https://github.com/neoclide/coc.nvim
